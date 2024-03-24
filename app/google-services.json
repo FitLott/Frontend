@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "911795733736",
+    "project_id": "fitlott",
+    "storage_bucket": "fitlott.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911795733736:android:d694e082c9e2ce3d81755d",
+        "android_client_info": {
+          "package_name": "com.example.fitlott"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsC8jAOt48G_4al0cADB8jt4v0KlkHxGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
