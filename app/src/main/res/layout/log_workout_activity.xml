@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Input field for Exercise -->
+    <EditText
+        android:id="@+id/editTextExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exercise"/>
+
+    <!-- Input field for Reps/set -->
+
+    <!-- Layout for Add and Cancel buttons -->
+    <EditText
+        android:id="@+id/editTextRepsSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Reps/set"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!-- Add Button -->
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>
