@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitLott"
         tools:targetApi="31">
+
+        <!-- Existing activities -->
         <activity
             android:name=".LoginActivity"
             android:exported="false">
@@ -27,14 +29,23 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-    </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
+        <!-- AddExerciseActivity -->
+        <activity
+            android:name=".AddExerciseActivity"
+            android:exported="true" /> 
+
+        <activity
+            android:name=".FabActivity"
+            android:exported="true" />
+    </application>
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
