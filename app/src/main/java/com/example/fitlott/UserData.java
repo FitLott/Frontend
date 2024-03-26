@@ -1,6 +1,6 @@
 package com.example.fitlott;
 
-public class HelperClass {
+public class UserData {
 
     String name, email, username, password;
 
@@ -36,13 +36,13 @@ public class HelperClass {
         this.password = password;
     }
 
-    public HelperClass(String name, String email, String username, String password) {
+    public UserData(String name, String email, String username, String password) {
         this.name = name;
         this.email = email;
         this.username = username;
         this.password = password;
     }
 
-    public HelperClass() {
+    public UserData() {
     }
 }

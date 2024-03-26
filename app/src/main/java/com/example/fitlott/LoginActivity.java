@@ -42,13 +42,12 @@ public class LoginActivity extends AppCompatActivity {
                     //set a toast that says nope u cant login
                     Toast.makeText(getApplicationContext(), "Invalid User or Password", Toast.LENGTH_SHORT).show();
                 } else {
-                    //check if the user is in the database
-                    //checkUser();
 
-                    //test for opening the main_activity.xml which is the bottomnavbar
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                    finish();
+
+
+                    checkUser();
+
+
                 }
             }
         });
@@ -108,12 +107,8 @@ public class LoginActivity extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
 
-                        Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
-                        intent.putExtra("name", nameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("username", usernameFromDB);
-                        intent.putExtra("password", passwordFromDB);
 
                         startActivity(intent);
                     } else {
