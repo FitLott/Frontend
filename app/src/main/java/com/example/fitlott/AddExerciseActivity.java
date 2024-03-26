@@ -29,6 +29,7 @@ public class AddExerciseActivity extends Activity {
             public void onClick(View v) {
                 addExercise();
             }
+
         });
 
         // Set the click listener for the Cancel button
@@ -47,7 +48,6 @@ public class AddExerciseActivity extends Activity {
 
         if (!exercise.isEmpty() && !reps.isEmpty()) {
             // TODO: Add your logic here to handle the new exercise, e.g., add it to a database or a list
-
             Toast.makeText(this, "Exercise added", Toast.LENGTH_SHORT).show();
             finish(); // Close the activity after adding
         } else {

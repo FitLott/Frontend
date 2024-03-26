@@ -34,18 +34,20 @@
                 android:value="" />
         </activity>
 
+        <activity android:name=".MainActivity"/>
+
         <!-- AddExerciseActivity -->
         <activity
             android:name=".AddExerciseActivity"
-            android:exported="true" /> 
+            android:exported="true" />
 
         <activity
             android:name=".FabActivity"
             android:exported="true" />
+
     </application>
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 </manifest>
