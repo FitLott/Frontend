@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.discover){
                 replaceFragment(new DiscoverFragment());
             } else if (itemId == R.id.profile){
-                replaceFragment(new ProfileFragment());
+                replaceFragment(new ProfileActivity());
             }
             return true;
         });
