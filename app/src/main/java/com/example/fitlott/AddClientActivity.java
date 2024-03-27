@@ -25,6 +25,8 @@ public class AddClientActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_client);
 
+
+        addMember = findViewById(R.id.buttonAddMember);
         //adding members to the db
         addMember.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,7 @@ public class AddClientActivity extends AppCompatActivity {
             }
         });
 
+        cancelMember = findViewById(R.id.buttonCancelMember);
         //close the activity if user presses cancel
         cancelMember.setOnClickListener(new View.OnClickListener() {
             @Override
