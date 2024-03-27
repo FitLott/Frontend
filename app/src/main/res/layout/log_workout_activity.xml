@@ -5,36 +5,51 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Input field for Exercise -->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Log Excercise"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        />
+
     <EditText
         android:id="@+id/editTextExercise"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Exercise"/>
 
-    <!-- Input field for Reps/set -->
-
-    <!-- Layout for Add and Cancel buttons -->
     <EditText
-        android:id="@+id/editTextRepsSet"
-        android:layout_width="match_parent"
+        android:id="@+id/editTextReps"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:hint="Reps/set"
+        android:hint="Reps"
         android:inputType="number"
         />
+    <EditText
+        android:id="@+id/editTextSets"
+        android:layout_marginTop="-46dp"
+        android:layout_marginStart="50dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Sets" />
 
     <EditText
         android:id="@+id/editTextWeight"
-        android:layout_width="250dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Weight" />
+        android:hint="Weight" />
 
     <ToggleButton
         android:id="@+id/toggleButton"
         android:layout_marginTop="-50dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginLeft="100dp"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:textOn="lbs"
@@ -58,6 +73,7 @@
         <!-- Cancel Button -->
         <Button
             android:id="@+id/buttonCancel"
+            android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel" />

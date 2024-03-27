@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddClientActivity">
+
+    <TextView
+        android:id="@+id/addMemberTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Add Member/Client"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/editTextAddName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Name"/>
+
+    <EditText
+        android:id="@+id/editTextAddEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/addMemberChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        >
+        <com.google.android.material.chip.Chip
+            android:id="@+id/beginnerChip"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Beginner"
+            app:chipBackgroundColor="@color/red"
+            android:textColor="@color/white"
+            />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/intermediateChip"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Intermediate"
+            app:chipBackgroundColor="@color/red"
+            android:textColor="@color/white"
+            />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertChip"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Expert"
+            app:chipBackgroundColor="@color/red"
+            android:textColor="@color/white"
+            />
+    </com.google.android.material.chip.ChipGroup>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/buttonAddMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/buttonCancelMember"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

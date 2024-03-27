@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitLott"
         tools:targetApi="31">
-
+        <activity
+            android:name=".AddClientActivity"
+            android:exported="false" />
         <!-- Existing activities -->
         <activity
             android:name=".LoginActivity"
@@ -29,25 +34,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-        <activity android:name=".MainActivity"/>
-
-        <!-- AddExerciseActivity -->
+        <activity android:name=".MainActivity" /> <!-- AddExerciseActivity -->
         <activity
             android:name=".AddExerciseActivity"
             android:exported="true" />
-
         <activity
             android:name=".FabActivity"
             android:exported="true" />
-
     </application>
 
-    <!-- Permissions -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
