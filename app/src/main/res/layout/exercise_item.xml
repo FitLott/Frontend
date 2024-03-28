@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    android:id="@+id/exerciseData"
+app:cardElevation="4dp">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/exerciseNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exercise Name"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/exerciseRepsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reps: 10"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/exerciseSetsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sets: 3"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/exerciseWeightsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight: 20kg"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

@@ -42,7 +42,7 @@
         android:textAlignment="center"
         >
     </TextView>
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/logged_exercise_list"
         android:background="@color/white"
         android:layout_width="match_parent"
