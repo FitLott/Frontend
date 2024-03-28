@@ -66,11 +66,8 @@ public class AddExerciseActivity extends AppCompatActivity {
         String weight = weightText.getText().toString().trim();
         String sets = setsText.getText().toString().trim();
 
-
-
         SharedPreferences sharedPreferences = this.getSharedPreferences("AppPrefs",MODE_PRIVATE);
         String userID = sharedPreferences.getString("UserID", "");
-
         //add functionality of adding to the database
         if (!exercise.isEmpty() && !reps.isEmpty()) {
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(userID);
@@ -91,7 +88,6 @@ public class AddExerciseActivity extends AppCompatActivity {
                             // Data successfully written
                             Toast.makeText(AddExerciseActivity.this, "Exercise added", Toast.LENGTH_SHORT).show();
                             finish(); // Close the activity after adding
-
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -102,9 +98,6 @@ public class AddExerciseActivity extends AppCompatActivity {
                             Log.e("Firebase", "Failed to write user data to Firebase", e);
                         }
                     });
-
-
-
 
         } else {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();

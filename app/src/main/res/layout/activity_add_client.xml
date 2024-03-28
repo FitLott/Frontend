@@ -32,44 +32,45 @@
         android:inputType="textEmailAddress"
         android:hint="Email"/>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/addMemberChipGroup"
+    <LinearLayout
+        android:id="@+id/toggleButtonGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_gravity="center"
+        android:gravity="center">
 
-        >
-        <com.google.android.material.chip.Chip
-            android:id="@+id/beginnerChip"
+        <ToggleButton
+            android:id="@+id/beginnerToggleButton"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Beginner"
-            app:chipBackgroundColor="@color/red"
-            android:textColor="@color/white"
-            />
-        <com.google.android.material.chip.Chip
-            android:id="@+id/intermediateChip"
+            android:layout_height="wrap_content"
+            android:textOff="Beginner"
+            android:textOn="Beginner"
+            android:background="@drawable/round_toggle"
+            android:textColor="@color/toggle_button_text_colour"
+            android:layout_marginEnd="8dp"/>
+
+        <ToggleButton
+            android:id="@+id/intermediateToggleButton"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Intermediate"
-            app:chipBackgroundColor="@color/red"
-            android:textColor="@color/white"
-            />
-        <com.google.android.material.chip.Chip
-            android:id="@+id/expertChip"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textOff="Intermediate"
+            android:textOn="Intermediate"
+            android:background="@drawable/round_toggle"
+            android:textColor="@color/toggle_button_text_colour"
+            android:layout_marginEnd="8dp"/>
+
+        <ToggleButton
+            android:id="@+id/expertToggleButton"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Expert"
-            app:chipBackgroundColor="@color/red"
-            android:textColor="@color/white"
-            />
-    </com.google.android.material.chip.ChipGroup>
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:textOff="Expert"
+            android:textOn="Expert"
+            android:background="@drawable/round_toggle"
+            android:textColor="@color/toggle_button_text_colour"/>
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
