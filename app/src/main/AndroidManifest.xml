@@ -16,9 +16,6 @@
         android:theme="@style/Theme.FitLott"
         tools:targetApi="31">
         <activity
-            android:name=".testActivity"
-            android:exported="false" />
-        <activity
             android:name=".AddClientActivity"
             android:exported="false" /> <!-- Existing activities -->
         <activity
