@@ -13,4 +13,11 @@ public class ExerciseData {
         this.weights = weights;
         this.isPounds = isPounds;
     }
+
+    public String getMetric(){
+        if(isPounds){
+            return " lbs";
+        }
+        return " kg";
+    }
 }

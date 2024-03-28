@@ -2,6 +2,7 @@ package com.example.fitlott;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodayFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,7 +49,8 @@ public class TodayFragment extends Fragment {
 
                 if(checkedId == R.id.clientsRdButton){
                     addClient.setVisibility(View.VISIBLE);
-                    fetchMembers();
+                    clientList.setVisibility(View.VISIBLE);
+                    fetchMembers(view);
                 }
                 else{
                     addClient.setVisibility(View.GONE);
@@ -66,34 +69,30 @@ public class TodayFragment extends Fragment {
 
         return view;
     }
-
-    private void fetchMembers() {
+    private void fetchMembers(View view) {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("AppPrefs", MODE_PRIVATE);
         String userID = sharedPreferences.getString("UserID", "");
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(userID).child("members");
+        RecyclerView clientList = view.findViewById(R.id.clientRecyclerView);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 List<ClientData> clientDataList = new ArrayList<>();
                 if (snapshot.exists()) {
                     for (DataSnapshot exSnapshot : snapshot.getChildren()) {
-                            String reps = exSnapshot.child("reps").getValue(String.class);
-                            String weights = exSnapshot.child("weights").getValue(String.class);
-                            String sets = exSnapshot.child("sets").getValue(String.class);
-                            Boolean isPounds = exSnapshot.child("isPounds").getValue(Boolean.class);
-                            String exercise = exSnapshot.child("exercise").getValue(String.class);
-                            exerciseList.add(new ExerciseData(exercise, reps,sets,weights, Boolean.TRUE.equals(isPounds)));
-                        }
+                            String clientName = exSnapshot.child("MemberName").getValue(String.class);
+                            String clientEmail = exSnapshot.child("MemberEmail").getValue(String.class);
+                            clientDataList.add(new ClientData(clientName, clientEmail));
                     }
                 }
-                ExerciseAdapter adapter = new ExerciseAdapter(exerciseList);
-                l.setAdapter(adapter);
+                ClientAdapter adapter = new ClientAdapter(clientDataList);
+                clientList.setAdapter(adapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                
             }
-
-        }
+        });
+    }
 }

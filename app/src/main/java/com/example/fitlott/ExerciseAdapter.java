@@ -31,7 +31,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
         holder.exerciseNameTextView.setText(exercise.exercise);
         holder.exerciseRepsTextView.setText("Reps: "+exercise.reps);
         holder.exerciseSetsTextView.setText("Sets: "+exercise.sets);
-        holder.exerciseWeightsTextView.setText("Weight: "+ exercise.weights + exercise.isPounds);
+        holder.exerciseWeightsTextView.setText("Weight: "+ exercise.weights + exercise.getMetric());
     }
 
     @Override
